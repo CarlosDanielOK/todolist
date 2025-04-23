@@ -1,6 +1,6 @@
 # ✅ To-Do List App
 
-Una aplicación web interactiva donde podés agregar, visualizar y eliminar tus actividades favoritas. Fue desarrollada como parte del **Módulo 1** del bootcamp de Desarrollo Web Full Stack.
+Una página web interactiva donde podés agregar, visualizar y eliminar tus actividades favoritas. Fue desarrollada como parte del **Módulo 1** del bootcamp de Desarrollo Web Full Stack.
 
 ---
 
