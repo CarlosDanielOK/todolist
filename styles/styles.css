@@ -3,49 +3,54 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px
 }
 
 h1,
 h2 {
-    font-size: 40px;
+    font-size: clamp(24px, 5vw, 40px);
+    text-align: center;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
 }
 
 p {
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
 }
 
 header {
-    width: 1000px;
-    height: 111px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 111px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 p#subtitulo {
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
 }
 
 main {
-    width: 1000px;
-    height: 800px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
 }
 
 /* SOBRE MI */
 section#sobre-mi {
     width: 100%;
     text-align: center;
+    padding: 20px;
 }
 
 /* TECNOLOGIAS FAVORITAS */
@@ -55,24 +60,30 @@ section#tecnologias-favoritas {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding: 20px;
 }
 
 div#tecnologias-favoritas-contenedor {
     width: 100%;
-    height: 330px;
+    height: auto;
+    min-height: 330px;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 40px;
+    padding: 20px;
 }
 
 .tecnologias-tarjetas img {
-    width: 150px;
-    height: 150px;
+    width: clamp(100px, 15vw, 150px);
+    height: clamp(100px, 15vw, 150px);
 }
 
 div.tecnologias-tarjetas {
-    width: 160px;
-    height: 220px;
+    width: clamp(140px, 20vw, 160px);
+    height: auto;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -80,6 +91,7 @@ div.tecnologias-tarjetas {
     border: 2px solid black;
     border-radius: 15px;
     transition: all 0.3s;
+    padding: 10px;
 }
 
 div.tecnologias-tarjetas:hover {
@@ -93,31 +105,39 @@ section#actividades-favoritas {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 section#actividades-favoritas form {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
     align-items: center;
+    padding: 20px;
 }
 
 #inombre,
 #idescripcion,
 #iurlimagen {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid gray;
+    padding: 0 10px;
 }
 
 button#boton {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
     background-color: #0866ff;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
@@ -126,17 +146,19 @@ button#boton {
 /* TARJETAS DE ACTIVIDADES */
 #contenedor-actividades {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .actividades {
-    width: 222px;
-    height: 300px;
+    width: clamp(200px, 30vw, 222px);
+    height: auto;
+    min-height: 300px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -144,21 +166,25 @@ button#boton {
     justify-content: space-evenly;
     text-align: center;
     overflow: hidden;
+    padding: 10px;
 }
 
 .actividades-titulo {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .actividades-img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 170px;
     object-fit: cover;
 }
 
 .actividades-texto {
-    font-size: 15px;
-    width: 200px;
+    font-size: clamp(14px, 1.5vw, 15px);
+    width: 100%;
+    max-width: 200px;
     overflow-y: auto;
 }
 
@@ -173,4 +199,43 @@ button.boton-eliminar {
 
 button.boton-eliminar:hover {
     background-color: red;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    div#tecnologias-favoritas-contenedor {
+        flex-direction: column;
+    }
+    
+    .tecnologias-tarjetas {
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    section#actividades-favoritas form {
+        width: 90%;
+    }
+    
+    .actividades {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+    
+    p#subtitulo {
+        font-size: 18px;
+    }
+    
+    #inombre, #idescripcion, #iurlimagen {
+        width: 90%;
+    }
+    
+    button#boton {
+        width: 90%;
+    }
 }
