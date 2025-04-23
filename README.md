@@ -4,7 +4,7 @@ Una aplicación web interactiva donde podés agregar, visualizar y eliminar tus 
 
 ---
 
-## ✨ Características
+## 🖥️ Características
 
 - 📝 **Agregar actividades** con nombre, descripción y URL de imagen.
 - ❌ **Eliminar actividades** individualmente.
@@ -13,7 +13,7 @@ Una aplicación web interactiva donde podés agregar, visualizar y eliminar tus 
 
 ---
 
-## 🧪 Tecnologías utilizadas
+## 🔑 Tecnologías utilizadas
 
 - **HTML5** – estructura del contenido.
 - **CSS3** – estilos y diseño responsive con media queries.
