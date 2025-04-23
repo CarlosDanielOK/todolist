@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Carlos Lazo</h1>
+        <p id="subtitulo">Página Web</p>
+    </header>
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Hola, mi nombre es Carlos. Estoy creando está página web para aprobar el módulo 1.</p>
+        </section>
+
+        <section id="tecnologias-favoritas">
+            <h2>Tecnologías favoritas</h2>
+            <div id="tecnologias-favoritas-contenedor">
+                <div class="tecnologias-tarjetas">
+                    <h3>HTML</h3>
+                    <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F998EFA4B5ABB7E9F0B"
+                        alt="html5 logo">
+                </div>
+                <div class="tecnologias-tarjetas">
+                    <h3>CSS</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                        alt="css3 logo">
+                </div>
+                <div class="tecnologias-tarjetas">
+                    <h3>JavaScript</h3>
+                    <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png"
+                        alt="JavaScript logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="actividades-favoritas">
+            <h2>Actividades favoritas</h2>
+            <form id="form">
+                <input type="text" name="nombre" placeholder="Nombre" id="inombre" required>
+                <input type="text" name="descripcion" placeholder="Descripción de la actividad" id="idescripcion" required>
+                <input type="url" name="urlimagen" placeholder="Link de la imagen" id="iurlimagen" required>
+                <button type="submit" id="boton">Agregar actividad</button>
+            </form>
+
+            <div id="contenedor-actividades">
+                <p id="textoNoHayActividades">Sin actividades por el momento</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
